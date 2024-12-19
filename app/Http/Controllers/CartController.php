@@ -75,14 +75,6 @@ class CartController extends Controller
         return redirect()->back()->with('success', 'Product added to cart!');
     }
 
-
-
-
-
-
-
-
-
     public function viewCart()
     {
         // For authenticated users, fetch the cart from the database
@@ -111,9 +103,6 @@ class CartController extends Controller
             'totalWithTaxAndShipping' => $cartTotalData['totalWithTaxAndShipping']
         ]);
     }
-
-
-
 
     public function updateQuantity(Request $request, $id)
     {
